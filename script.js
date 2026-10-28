@@ -11,7 +11,7 @@ const modos_configuracion = {
   },
   modo_2: {
     palabras: [
-      { palabra: "CALIFICATIONS", pista: "The scores or grades you get in school" },
+      { palabra: "PENCIL", pista: "Used to write or draw" },
       { palabra: "WHITEBOARD", pista: "A large white surface in a classroom for writing" },
       { palabra: "SENTENCES", pista: "Groups of words that make a complete thought" },
       { palabra: "RESULTS", pista: "The final outcome of a test or exam" }
