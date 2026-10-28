@@ -98,8 +98,8 @@ function iniciarJuego() {
   actualizarProgreso();
   setBuho("pensando");
 
-  indicacion.textContent = "Ordená las letras para formar la palabra";
-  palabraActual.textContent = "Hacé clic en 'Pedir pista' si la necesitás";
+  indicacion.textContent = "Arrange the letters to form the word";
+  palabraActual.textContent = "Click on Request a Hint to get a clue";
   mostrarMensaje("", "");
 
   armarLibreta();
