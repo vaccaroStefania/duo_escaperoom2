@@ -213,7 +213,7 @@ function verificarPalabraActual(contenedorLetras) {
 
   if (letras === palabraCorrecta) {
     aciertos++;
-    mostrarMensaje("¡Excelente! \"" + palabraCorrecta + "\" es correcta.", "ok");
+    mostrarMensaje("Excelent! \"" + palabraCorrecta + "\" is correct.", "ok");
     indiceActual++;
     actualizarProgreso();
 
@@ -221,7 +221,7 @@ function verificarPalabraActual(contenedorLetras) {
       finalizarJuego(true);
     } else {
       setBuho("pensando");
-      palabraActual.textContent = "Hacé clic en 'Pedir pista' si la necesitás";
+      palabraActual.textContent = "Click on Request a hint to get a clue";
       armarLibreta();
     }
   } else {
@@ -238,7 +238,7 @@ function verificarPalabraActual(contenedorLetras) {
       finalizarJuego(false);
     } else {
       setBuho("error", 1100);
-      mostrarMensaje("Esa combinación no es correcta. ¡Intentalo de nuevo!", "error");
+      mostrarMensaje("Wrong combination, try again", "error");
     }
   }
 }
@@ -254,10 +254,10 @@ function pedirPista() {
 function finalizarJuego(gano) {
   juegoTerminado = true;
   setBuho(gano ? "ganar" : "perder");
-  indicacion.textContent = gano ? "¡Completaste la libreta!" : "Te quedaste sin corazones";
-  palabraActual.textContent = gano ? "¡Ganaste!" : "Perdiste";
+  indicacion.textContent = gano ? "You completed the notebook!" : "You're out of hearts";
+  palabraActual.textContent = gano ? "You won" : "You lost...";
   mostrarMensaje(
-    gano ? "¡Todas las palabras completadas!" : "Podés intentarlo otra vez.",
+    gano ? "All words are completed" : "You can try again.",
     gano ? "ok" : "error"
   );
   btnPista.hidden = true;
