@@ -363,7 +363,7 @@ function actualizarVidas() {
 }
 
 function actualizarProgreso() {
-  contador.textContent = aciertos + " out of " + listaPalabras.length;
+  contador.textContent = aciertos + "  out of " + listaPalabras.length;
   progreso.style.width = (aciertos / listaPalabras.length * 100) + "%";
 }
 
