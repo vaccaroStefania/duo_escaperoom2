@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>juegoenglish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="ESTILOS.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="juego">
+ 
+  <!-- vidas, progreso y pausa -->
+  <div class="barra">
+    <div class="vidas" id="vidas">
+      <div class="vida"><img src="img/VIDA.png" alt="Vida 1"></div>
+      <div class="vida"><img src="img/VIDA.png" alt="Vida 2"></div>
+      <div class="vida"><img src="img/VIDA.png" alt="Vida 3"></div>
+    </div>
+    <div class="progreso">
+      <div class="progreso-pista"><div class="progreso-relleno" id="progreso"></div></div>
+      <div class="contador" id="contador">0 de 4</div>
+    </div>
+    <button type="button" class="btn principal chico" id="btnPausa">Pausar</button>
+  </div>
+ 
+  <!-- búho, libreta y fichas -->
+  <div class="escena">
+ 
+    <!-- búho -->
+    <div class="zona-buho" id="zonaBuho" data-estado="pensando">
+      <div class="globo">
+        <div class="globo-indicacion" id="indicacion">Ordená las letras arrastrando</div>
+        <div class="globo-palabra" id="palabraActual"></div>
+        <div class="globo-mensaje" id="mensaje" aria-live="polite"></div>
+      </div>
+      <div class="buho">
+        <img class="img-pensando" src="img/anteojos-pensando.png"       alt="Búho pensando">
+        <img class="img-pista"    src="img/investigar.png"             alt="Búho investigando">
+        <img class="img-error"    src="img/enojado-error.png"          alt="Búho enojado">
+        <img class="img-ganar"    src="img/duo-con-libro-ganar.png"    alt="Búho feliz con libros">
+        <img class="img-perder"   src="img/duo-furioso-perder.png"     alt="Búho furioso">
+      </div>
+    </div>
+ 
+    <!-- libreta -->
+    <div class="zona-libreta">
+      <div class="libreta">
+        <div class="libreta-cinta"></div>
+        <div class="libreta-titulo">My Notebook</div>
+        <div class="lineas" id="lineas"></div>
+      </div>
+    </div>
+
+    <!-- Contenedor donde JS genera las fichas arrastrabiles -->
+    <div class="contenedor-fichas" id="fichasContenedor"></div>
+ 
+  </div>
+ 
+  <!-- pista / jugar de nuevo -->
+  <div class="parte-inferior">
+    <button type="button" class="btn pista" id="btnPista">Pedir pista</button>
+    <button type="button" class="btn principal" id="btnJugarDeNuevo" hidden>Jugar de nuevo</button>
+  </div>
+ 
+</div>
+ 
+<!-- menú de pausa -->
+<div class="overlay" id="overlayPausa" role="dialog" aria-modal="true" aria-labelledby="tituloPausa" hidden>
+  <div class="overlay-tarjeta">
+    <h2 id="tituloPausa">Juego en pausa</h2>
+    <div class="overlay-botones">
+      <button type="button" class="btn principal" id="btnContinuar">Continuar</button>
+      <button type="button" class="btn principal" id="btnModos">Modos</button>
+      <button type="button" class="btn secundario" id="btnReiniciar">Reiniciar</button>
+    </div>
+  </div>
+</div>
+
+<!-- menú de Modos -->
+<div class="overlay" id="overlayModos" role="dialog" aria-modal="true" aria-labelledby="tituloModos" hidden>
+  <div class="overlay-tarjeta">
+    <h2 id="tituloModos">Seleccionar Modo</h2>
+    <div class="overlay-botones">
+      <button type="button" class="btn principal btn-modo" data-modo="modo_1">Modo 1</button>
+      <button type="button" class="btn principal btn-modo" data-modo="modo_2">Modo 2</button>
+      <button type="button" class="btn principal btn-modo" data-modo="modo_3">Modo 3</button>
+      <button type="button" class="btn principal btn-modo" data-modo="modo_4">Modo 4</button>
+      <button type="button" class="btn secundario" id="btnVolverPausa">Volver</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- overlay del premio con el código del modo -->
+<div class="overlay" id="overlayPremio" role="dialog" aria-modal="true" aria-label="El código secreto" hidden>
+  <div class="premio" id="premio">
+    <div class="premio-contenido">
+      <img class="premio-buho" src="img/para-cuando-de-el-numero.png" alt="Búho Premio">
+      <div class="premio-texto">
+        <div class="premio-frase">El código es...</div>
+        <div class="premio-numero" id="texto_codigo_premio">---</div>
+      </div>
+    </div>
+    <div class="premio-botones">
+      <button type="button" class="btn principal chico" id="btnPremioJugar">Jugar de nuevo</button>
+      <button type="button" class="btn secundario chico" id="btnPremioCerrar">Cerrar</button>
+    </div>
+  </div>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
