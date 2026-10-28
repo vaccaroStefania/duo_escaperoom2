@@ -59,8 +59,8 @@
  
   <!-- pista / jugar de nuevo -->
   <div class="parte-inferior">
-    <button type="button" class="btn pista" id="btnPista">Pedir pista</button>
-    <button type="button" class="btn principal" id="btnJugarDeNuevo" hidden>Jugar de nuevo</button>
+    <button type="button" class="btn pista" id="btnPista">Request a hint</button>
+    <button type="button" class="btn principal" id="btnJugarDeNuevo" hidden>Play again</button>
   </div>
  
 </div>
@@ -68,11 +68,11 @@
 <!-- menú de pausa -->
 <div class="overlay" id="overlayPausa" role="dialog" aria-modal="true" aria-labelledby="tituloPausa" hidden>
   <div class="overlay-tarjeta">
-    <h2 id="tituloPausa">Juego en pausa</h2>
+    <h2 id="tituloPausa">Game paused</h2>
     <div class="overlay-botones">
-      <button type="button" class="btn principal" id="btnContinuar">Continuar</button>
-      <button type="button" class="btn principal" id="btnModos">Modos</button>
-      <button type="button" class="btn secundario" id="btnReiniciar">Reiniciar</button>
+      <button type="button" class="btn principal" id="btnContinuar">Continue</button>
+      <button type="button" class="btn principal" id="btnModos">Modes</button>
+      <button type="button" class="btn secundario" id="btnReiniciar">Restart</button>
     </div>
   </div>
 </div>
@@ -80,13 +80,13 @@
 <!-- menú de Modos -->
 <div class="overlay" id="overlayModos" role="dialog" aria-modal="true" aria-labelledby="tituloModos" hidden>
   <div class="overlay-tarjeta">
-    <h2 id="tituloModos">Seleccionar Modo</h2>
+    <h2 id="tituloModos">Select mode</h2>
     <div class="overlay-botones">
-      <button type="button" class="btn principal btn-modo" data-modo="modo_1">Modo 1</button>
-      <button type="button" class="btn principal btn-modo" data-modo="modo_2">Modo 2</button>
-      <button type="button" class="btn principal btn-modo" data-modo="modo_3">Modo 3</button>
-      <button type="button" class="btn principal btn-modo" data-modo="modo_4">Modo 4</button>
-      <button type="button" class="btn secundario" id="btnVolverPausa">Volver</button>
+      <button type="button" class="btn principal btn-modo" data-modo="modo_1">Mode 1</button>
+      <button type="button" class="btn principal btn-modo" data-modo="modo_2">Mode 2</button>
+      <button type="button" class="btn principal btn-modo" data-modo="modo_3">Mode 3</button>
+      <button type="button" class="btn principal btn-modo" data-modo="modo_4">Mode 4</button>
+      <button type="button" class="btn secundario" id="btnVolverPausa">Go back</button>
     </div>
   </div>
 </div>
@@ -97,13 +97,13 @@
     <div class="premio-contenido">
       <img class="premio-buho" src="img/para-cuando-de-el-numero.png" alt="Búho Premio">
       <div class="premio-texto">
-        <div class="premio-frase">El código es...</div>
+        <div class="premio-frase">The code is...</div>
         <div class="premio-numero" id="texto_codigo_premio">---</div>
       </div>
     </div>
     <div class="premio-botones">
-      <button type="button" class="btn principal chico" id="btnPremioJugar">Jugar de nuevo</button>
-      <button type="button" class="btn secundario chico" id="btnPremioCerrar">Cerrar</button>
+      <button type="button" class="btn principal chico" id="btnPremioJugar">Play again</button>
+      <button type="button" class="btn secundario chico" id="btnPremioCerrar">Close</button>
     </div>
   </div>
 </div>
